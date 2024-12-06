@@ -1,9 +1,6 @@
 name: Build and Publish Docker Image
 
 on:
-  push:
-    branches:
-      - dev
   release:
     types: [published]
 
@@ -31,5 +28,5 @@ jobs:
         with:
           platforms: linux/arm64
           push: true
-          tags: ghcr.io/callepuzzle/docker-image-tanka-sops:latest
+          tags: ghcr.io/callepuzzle/docker-image-tanka-sops:${{ github.event.release.tag_name }}
           context: .
