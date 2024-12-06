@@ -31,5 +31,5 @@ jobs:
         with:
           platforms: linux/arm64
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: ghcr.io/callepuzzle/docker-image-tanka-sops:latest
           context: .
